@@ -1,7 +1,5 @@
 <?php
-/**
-* @author evilnapsis
-**/
+
 
 
 $debug= false;
