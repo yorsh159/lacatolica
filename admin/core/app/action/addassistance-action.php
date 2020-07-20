@@ -9,6 +9,7 @@ if(!empty($_POST)){
 	$assis->kind_id = $_POST["kind_id"];
 	$assis->date_at = $_POST["date_at"];
 	$assis->add();
+		
 if($_POST["kind_id"]==2){
 	$alumn = PersonData::getById($_POST["alumn_id"]);
 	$parent = PersonData::getById($alumn->parent_id);
@@ -17,6 +18,8 @@ if($_POST["kind_id"]==2){
 	$teacher = PersonData::getById($asignation->teacher_id);
 //	echo "nuevo";
 //	print_r($parent);
+
+
  $message = "<html>
 <body>
 <h1>El alumno no ha asistido a la escuela</h1>
@@ -29,7 +32,7 @@ if($_POST["kind_id"]==2){
 </html>";
 
 $to = $parent->email;
-$adminemail = "admin@admin.com";
+$adminemail = "admin-no-replay@lacatolica-se.com";
 $subject = 'El alumno tiene una inasistencia';
 
 $headers = "From: " . strip_tags($adminemail) . "\r\n";
@@ -53,6 +56,7 @@ if($_POST["kind_id"]==2){
 	$teacher = PersonData::getById($asignation->teacher_id);
 //	echo "nuevo";
 //	print_r($parent);
+
  $message = "<html>
 <body>
 <h1>El alumno no ha asistido a la escuela</h1>
@@ -65,7 +69,7 @@ if($_POST["kind_id"]==2){
 </html>";
 
 $to = $parent->email;
-$adminemail = "admin@admin.com";
+$adminemail = "admin-no-replay@lacatolica-se.com";
 $subject = 'El alumno tiene una inasistencia';
 
 $headers = "From: " . strip_tags($adminemail) . "\r\n";

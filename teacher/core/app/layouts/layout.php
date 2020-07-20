@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>La Católica | Teacher Dashboard</title>
+    <title>La Católica | Profesor Dashboard</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.4 -->
     <link href="../plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />

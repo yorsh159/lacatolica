@@ -109,7 +109,7 @@
 
                         <li><a href="./index.php?view=home"><i class='fa fa-dashboard'></i> <span>Inicio</span></a></li>
                        <!-- <li><a href="./index.php?view=news"><i class='fa fa-file'></i> <span>Avisos</span></a></li>-->
-            <?php if(Core::$user->kind==1):?>
+           
 
             <li class="treeview">
               <a href="#"><i class='fa fa-institution'></i> <span>Escuela</span> <i class="fa fa-angle-left pull-right"></i></a>
@@ -122,7 +122,7 @@
             <li><a href="./?view=inscriptions"><i class='fa fa-angle-right'></i> <span>Inscripciones</span></a></li>
               </ul>
             </li>
-            <?php endif; ?>
+            
 
 
 

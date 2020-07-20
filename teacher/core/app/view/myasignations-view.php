@@ -80,9 +80,9 @@ switch ($s->d) {
         </td>   
 				<td style="width:260px;">
             <a href="./?view=teamalumns&id=<?php echo $team->id;?>&tid=<?php echo $team->team_id;?>&pid=<?php echo $team->period_id;?>" class="btn btn-default btn-xs"><i class="fa fa-th-list"></i> Alumnos</a>    
-            <!--<a href="./?view=teamcalifications&id=<?php echo $team->id;?>&tid=<?php echo $team->team_id;?>&pid=<?php echo $team->period_id;?>" class="btn btn-default btn-xs"><i class="fa fa-th-list"></i> Calificaciones</a> -->  
+            <a href="./?view=teamcalifications&id=<?php echo $team->id;?>&tid=<?php echo $team->team_id;?>&pid=<?php echo $team->period_id;?>" class="btn btn-default btn-xs"><i class="fa fa-th-list"></i> Calificaciones</a> 
                
-            <!--<a href="./?view=blocks&opt=all&id=<?php echo $team->id;?>" class="btn btn-default btn-xs"><i class="fa fa-th-large"></i> Actividades</a>-->    
+            <a href="./?view=blocks&opt=all&id=<?php echo $team->id;?>" class="btn btn-default btn-xs"><i class="fa fa-th-large"></i> Actividades</a>  
             <!--<a href="./?action=asignations&opt=finish&id=<?php echo $team->id;?>" class="btn btn-success btn-xs"><i class="fa fa-check"></i> Finalizar</a>-->    
 
         </td>

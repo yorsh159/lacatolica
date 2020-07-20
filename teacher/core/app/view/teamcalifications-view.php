@@ -8,10 +8,10 @@ $blocks = BlockData::getParentsByAsignationId($_GET["id"]);
 <div class="row">
 	<div class="col-md-12">
 		<h1>Registrar Calificaciones [<?php echo $asignation->getAsignature()->name; ?>] [<?php echo $team->grade." - ".$team->letter;?>] [<?php echo $period->name;?>]</h1>
-<!--
-<a href="./?view=teamasignatures&opt=all&id=<?php echo $team->id;?>&period_id=<?php echo $period->id;?>" class="btn btn-default"><i class="fa fa-arrow-left"></i> Ir a Asignaturas</a>
-<a href="./?view=teams&opt=general1&id=<?php echo $team->id;?>&period_id=<?php echo $period->id;?>" class="btn btn-default"><i class="fa fa-arrow-up"></i> Ir a Alumnos</a>
--->
+
+<a href="./?view=myasignations&opt=all&id=<?php echo $team->id;?>&period_id=<?php echo $period->id;?>" class="btn btn-default"><i class="fa fa-arrow-left"></i> Ir a Asignaturas</a>
+<a href="./?view=teamalumns&id=<?php echo $asignation->id;?>&tid=<?php echo $asignation->team_id;?>&pid=<?php echo $asignation->period_id;?>" class="btn btn-default"><i class="fa fa-arrow-up"></i> Ir a Alumnos</a>
+
 <br><br>
 	<?php if(count($alumns)>0):?>
 <?php endif; ?>
@@ -59,6 +59,7 @@ $blocks = BlockData::getParentsByAsignationId($_GET["id"]);
           if($exist!=null){ $cnt++; $sum+=$exist->val; $cc++;$pp+=$exist->val; } 
 
         ?>
+		
 <div class="input-group">
   <span class="input-group-addon" id="basic-addon1"><?php echo $sb->name; ?></span>
         <input type="text" class="form-control" name="val-<?php echo $alumn->id; ?>-<?php echo $sb->id; ?>" value="<?php if($exist!=null){ echo $exist->val;}?>" placeholder="<?php echo $sb->name; ?>">

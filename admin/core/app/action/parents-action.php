@@ -13,6 +13,7 @@ if(count($_POST)>0){
 	$user->kind=2;
 	$u = $user->add();
 	print "<script>window.location='index.php?view=parents';</script>";
+		
 }
 }
 if($_GET["opt"] && $_GET["opt"]=="upd"){

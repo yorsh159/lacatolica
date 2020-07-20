@@ -89,7 +89,7 @@ $alumns = InscriptionData::getAllByTP($_GET["id"],$_GET["period_id"]);
   </ul>
 </div>-->
 
-<!--<div class="btn-group">
+<div class="btn-group">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Reporte de Asistencia <span class="caret"></span>
   </button>
@@ -98,7 +98,7 @@ $alumns = InscriptionData::getAllByTP($_GET["id"],$_GET["period_id"]);
     <li><a href="./?view=teams&opt=assistancereport&asignation_id=<?php echo $asi->id;?>"><?php echo $asi->getAsignature()->name; ?></a></li>
 <?php endforeach; ?>
   </ul>
-</div>-->
+</div>
 
 <!--<div class="btn-group">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

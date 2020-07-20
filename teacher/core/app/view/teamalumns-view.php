@@ -45,9 +45,9 @@ $block_parents = BlockData::getParentsByAsignationId($_GET["id"]);
 			<thead>
 			<th>Codigo</th>
 			<th>Nombre</th>
-			<!--<th>Promedio</th>
+			<th>Promedio</th>
 			<th>Estado</th>
-			<th></th>-->
+			<th></th>
 			</thead>
 			<?php
 			foreach($alumns as $alumnx){
@@ -57,7 +57,7 @@ $block_parents = BlockData::getParentsByAsignationId($_GET["id"]);
 				<tr>
 				<td><?php echo $alumn->code; ?></td>
 				<td><?php echo $alumn->name." ".$alumn->lastname; ?></td>
-<!--<td>
+<td>
 	<?php
 $total=0;
 $c=0;
@@ -84,9 +84,9 @@ foreach($blocks as $b){
 					}
 
 				}else{ echo "<span class='label label-danger'>Reprobado</span>";}?>
-			</td>-->
+			</td>
 				<td style="width:160px;">
-				<!--<a href="index.php?view=openalumn&id=<?php echo $alumn->id;?>&tid=<?php echo $team->id;?>" class="btn btn-default btn-xs">Ver</a> -->
+				
 				<!--<a href="index.php?view=califications&alumn_id=<?php echo $alumn->id;?>&asignation_id=<?php echo $_GET["id"];?>" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i> Modificar Calificaciones</a>-->
 				</tr>
 				<?php

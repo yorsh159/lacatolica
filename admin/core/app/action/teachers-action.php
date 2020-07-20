@@ -13,7 +13,7 @@ if(count($_POST)>0){
 	$user->kind=1;
 	$u = $user->add();
 	print "<script>window.location='index.php?view=teachers';</script>";
-}
+	}
 }
 if($_GET["opt"] && $_GET["opt"]=="upd"){
 

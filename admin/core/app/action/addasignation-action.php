@@ -11,7 +11,7 @@ if($inscript==null){
 	Core::alert("Asignatura cargada exitosamente.");
 	Core::redir("./?view=teamasignatures&opt=all&id=$_POST[team_id]&period_id=$_POST[period_id]");
 }else{
-	Core::alert("Asinatura existente.");
+	Core::alert("Asignatura existente.");
 	Core::redir("./?view=teamasignatures&opt=all&id=$_POST[team_id]&period_id=$_POST[period_id]");
 }
 

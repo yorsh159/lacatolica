@@ -1,12 +1,15 @@
 <?php
 $asignation = AsignationData::getById($_GET["id"]);
+//$period = PeriodData::getById($asignation->period_id);
 $team = TeamData::getById($asignation->team_id);
 $alumns = InscriptionData::getAllByAlumnId($_GET["alumn_id"]);
-$blocks = BlockData::getAllByAsignationId($_GET["id"]);
+$blocks = BlockData::getParentsByAsignationId($_GET["id"]);
 ?>
 <div class="row">
 	<div class="col-md-12">
-		<h1><?php echo $asignation->getAsignature()->name; ?> [<?php echo $team->grade." - ".$team->letter;?>] <small>Calificaciones</small></h1>
+		<h1>Reporte de Calificaciones</h1>
+
+<br><br>
 	<?php if(count($alumns)>0):?>
 <?php endif; ?>
 		<?php
@@ -15,16 +18,17 @@ $blocks = BlockData::getAllByAsignationId($_GET["id"]);
 			// si hay usuarios
 			?>
 <div class="box box-primary">
+<div class="box-body">
+      
+      <input type="hidden" name="asignation_id" value="<?php echo $asignation->id;?>">
 			<table class="table table-bordered table-hover">
 			<thead>
 			<th>Codigo</th>
 			<th>Nombre</th>
-			<?php if(count($blocks)>0):?>
 			<?php foreach($blocks as $b):?>
 			<th><?php echo $b->name;?></th>
 			<?php endforeach; ?>
 			<th>Promedio</th>
-		<?php endif;?>
 			</thead>
 			<?php
 			foreach($alumns as $alumnx){
@@ -33,26 +37,52 @@ $blocks = BlockData::getAllByAsignationId($_GET["id"]);
 				<tr>
 				<td><?php echo $alumn->code; ?></td>
 				<td><?php echo $alumn->name." ".$alumn->lastname; ?></td>
-			<?php if(count($blocks)>0):?>
-			<?php 
-			$total=0;
-			$promedio = 0;
-			$c=0;
-			foreach($blocks as $b):
-			$exist = CalificationData::getExist($alumn->id,$b->id);
-			?>
-			<td>
-				<?php if($exist!=null){ echo $exist->val; $total+=$exist->val; $c++; }?>
-			</td>
-			<?php endforeach; ?>
-			<td><?php if($c>0){ echo $total/$c;}?></td>
-		<?php endif;?>
+
+			<?php
+			$cnt=0;
+			$sum=0;
+			foreach($blocks as $b){
+			$subs = BlockData::getAllByBlockId($b->id);
+
+				?>
+
+        <td>
+        <?php
+        $pp=0;
+        $cc=0;
+        foreach($subs as $sb):?>
+        <?php
+          $exist = CalificationData::getExist($alumn->id,$sb->id);
+          if($exist!=null){ $cnt++; $sum+=$exist->val; $cc++;$pp+=$exist->val; } 
+
+        ?>
+		
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1"><?php echo $sb->name; ?></span>
+        <input type="text" readonly="readonly" class="form-control" name="val-<?php echo $alumn->id; ?>-<?php echo $sb->id; ?>" value="<?php if($exist!=null){ echo $exist->val;}?>" placeholder="<?php echo $sb->name; ?>">
+        </div>
+    <?php endforeach; ?>
+<?php if(count($subs)>0):?>
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Promedio</span>
+        <input type="text" class="form-control" readonly value="<?php if($pp>0&&$cc>0){ echo $pp/$cc;}?>" placeholder="Promedio">
+        </div>
+<?php endif; ?>
+        </td>
+
+        <?php } ?>
+        <td><?php if($cnt>0&&$sum>0){ echo ($sum/$cnt);}else{ echo 0;}?></td>
+
+
 				</tr>
 				<?php
 
 			}
 
-echo "</table></div>";
+echo "</table>";?>
+
+<?php
+echo "</form></div></div>";
 
 		}else{
 			echo "<p class='alert alert-danger'>No hay Alumnos</p>";
