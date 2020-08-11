@@ -77,7 +77,7 @@ switch ($s->d) {
 				<td style="width:330px;">
             <a href="./?view=califications&id=<?php echo $team->id;?>&alumn_id=<?php echo $alumn->id; ?>" class="btn btn-default btn-xs"><i class="fa fa-th-list"></i> Calificaciones</a>  
             <a href="./?view=teams&opt=assistancereport&id=<?php echo $team->id;?>&alumn_id=<?php echo $alumn->id; ?>" class="btn btn-default btn-xs"><i class="fa fa-th-list"></i> Reporte de Asistencia</a>
-            
+            <a href="./?view=upload" class="btn btn-default btn-xs"><i class="fa fa-th-list"></i> Cargar Archivo</a>
               
         </td>
 				</tr>
@@ -90,4 +90,4 @@ switch ($s->d) {
 		?>
 	<?php endif; ?>
 	</div>
-
+  </div>

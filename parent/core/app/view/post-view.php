@@ -1,3 +1,4 @@
+<div class="row">
 <div class="col-md-12">
     <h1>Avisos</h1>
 <br>
@@ -29,7 +30,6 @@
     }
     ?>
     </table>
+    </div>  
     </div>
-        <!-- - - - - - - - - - - - - - - - - - - -->
 
-</div>
