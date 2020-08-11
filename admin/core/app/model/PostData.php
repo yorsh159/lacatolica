@@ -12,8 +12,8 @@ class PostData {
 	}
 
 	public function add(){
-		$sql = "insert into ".self::$tablename." (title,content,image,kind,kind_pub,user_id,created_at) ";
-		$sql .= "value (\"$this->title\",\"$this->content\",\"$this->image\",\"$this->kind\",\"$this->kind_pub\",$this->user_id,NOW())";
+		$sql = "insert into ".self::$tablename." (title,content,kind,kind_pub,user_id,created_at) ";
+		$sql .= "value (\"$this->title\",\"$this->content\",\"$this->kind\",\"$this->kind_pub\",$this->user_id,NOW())";
 		return Executor::doit($sql);
 	}
 

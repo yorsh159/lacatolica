@@ -1,125 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>La Católica-SE</title>
-<!--  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> -->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-  <link href="assets/css/animations.css" rel="stylesheet">
-  <link href="assets/css/normalize.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-  <link href="assets/css/royalslider.css" rel="stylesheet" type="text/css">
+    <title>Home</title>
+    <!-- Import Style -->
+    <link rel="stylesheet" href="./assets/css/home.css" />
+    
+  </head>
+  <body>
+    <div class="main-menu-toggle" id="main-menu-toggle"></div>
+    <header class="home-page">
+      <!-- Inicio navegación -->
+      <!-- Editar -->
+      <nav class="main-nav" id="main-nav">
+        <ul class="home-page-nave-container">
+          <li><a href="./admin/">ADMIN</a></li>
+          <li><a href="./parent/">PADRES</a></li>
+          <li><a href="./teacher/">PROFESOR</a></li>
+          
+        </ul>
+      </nav>
+      <!-- fin navegacion -->
+      <div class="home-page-container">
+        <div class="home-page-text">
+            <img src="assets/images/logo.jpg" alt="logo">
+          <h1>Bienvenido a la católica intranet</h1>
+          <h2>Podrás seguir de cerca la educación de tu hijo</h2>
 
-  <!-- include HTML5 IE enabling script and stylesheet for IE -->
-  <!--[if lte IE 9]>
-      <link href="assets/css/animations-ie-fix.css" rel="stylesheet">
-  <script type='text/javascript' src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/respond.assets/js/1.4.2/respond.js"></script>
-  <script src="assets/js/ie.js"></script>
-  <style type="text/css">
-    .gradient {
-       filter: none;
-    }
-  </style>
-<![endif]-->
-
-</head>
-
-<body class="home">
-  <!-- wrapper -->
-  <div id="wrapper" class="win-min-height">
-    <header id="header" class="header block background01">
-      <div class="container header_block">
-        <div class="row">
-
-          <nav class="navbar navbar-default">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <a class="navbar-brand" href="./">
-                 <b> LA CATÓLICA</b>
-                </a>
-                <div class="menu-btn">
-                  <button type="button" class="navbar-toggle collapsed color02" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <strong> <span class="sr-only">Toggle navigation</span> <span class="icon-bar background02"></span> <span class="icon-bar background02"></span> <span class="icon-bar background02"></span> </strong> <strong> MENU</strong>
-                  </button>
-                </div>
-              </div>
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav color02">
-                  <li class="active"><a href="./">INICIO</a></li>
-                  <li> <a href="./admin/">ADMIN</a></li>                  
-                  <li> <a href="./teacher/">PROFESOR</a></li>
-                  <!--<li> <a href="">ALUMNO</a></li>-->
-                  <li> <a href="./parent/">PADRE</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+          <!-- Call to Action para mostrar las actividades Inicio-->
+          
+          <!-- Fin de call to Action -->
+        </div>
+        <div class="home-page-img">
+          <img src="assets/images/graduation_isometric.svg" alt="home-page-img" />
         </div>
       </div>
+      <div class="home-page-absolute"></div>
     </header>
-<br><br><br>
-    <section id="counter" class="block background09 animatedParent animateOnce">
-      <div class="container">
-        <div class="row">
-          <div class="feature animated fadeIn slow">
-            <h2>BIENVENIDO A LA CATOLICA INTRANET</h2>
-          </div>
-          <div class="boxes animated fadeIn slow">
-            <div class="col col-sm-6 col-xs-12">
-
-              <h3></h3>
-              <div class="text-holder color04">
-                <p>Con esta plataforma usted podrá seguir de cerca la educación de su hijo</p>
-                <p>Podra visualizar las actividades del dia, las tareas asignadas e información que el docente a cargo pueda compartir</p>
-              </div>
-            </div>
-            <div class="col col-sm-6 col-xs-12">
-              <img src="assets/images/index.jpg" class="img-responsive">
-            </div>
-          </div>
-        </div>
-       
-      </div>
-    </section>
-    <footer id="footer" class="footer block background01 animatedParent animateOnce">
-      <div class="container">
-        <div class="row">
-          <div class="footerinner animated fadeIn slow">
-            <div class="logo_bottom">
-
-           
-          </div>
-        </div>
-      </div>
-    </footer>
-  
-
-  </div>
-  <script type="text/javascript" src="assets/js/jquery-min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/responsive-slider.js"></script>
-  <script src="assets/js/countUp.js"></script>
-  <script src="assets/js/touch-slide.js"></script>
-  <script src="assets/js/jquery.nav.js"></script>
-  <script src="assets/js/classie.js"></script>
-  <script src="assets/js/jquery.custom-scrollbar.js"></script>
-  <script src="assets/js/royalslider-min.js"></script>
-  <script src="assets/js/custom.js"></script>
-  <script type="text/javascript">
-    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-      var msViewportStyle = document.createElement('style')
-      msViewportStyle.appendChild(
-        document.createTextNode(
-          '@-ms-viewport{width:auto!important}'
-        )
-      )
-      document.querySelector('head').appendChild(msViewportStyle)
-    }
-  </script>
-</body>
-
+    <!-- <div class="home-page-absolute"></div> -->
+    <!-- import js -->
+    <script src=".assets/js/app.js"></script>
+  </body>
 </html>

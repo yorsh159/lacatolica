@@ -108,6 +108,9 @@
 
 
                         <li><a href="./index.php?view=home"><i class='fa fa-dashboard'></i> <span>Inicio</span></a></li>
+                        
+                        <li><a href="./?view=post"><i class='fa fa-file-text-o'></i> <span>Actividades</span></a></li>
+                        <li><a href="./?view=myfiles"><i class='fa fa-file-text-o'></i> <span>Materiales</span></a></li>
 
 
             <!--

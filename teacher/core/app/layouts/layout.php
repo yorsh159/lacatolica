@@ -107,8 +107,10 @@
              ?>
 
 
-                        <li><a href="./index.php?view=home"><i class='fa fa-dashboard'></i> <span>Inicio</span></a></li>
+            <li><a href="./index.php?view=home"><i class='fa fa-dashboard'></i> <span>Inicio</span></a></li>
             <li><a href="./?view=myasignations&opt=all"><i class='fa fa-retweet'></i> <span>Grados</span></a></li>
+            <li><a href="./?view=posts&opt=all"><i class='fa fa-retweet'></i> <span>Publicar Anuncio</span></a></li>
+            <li><a href="./?view=teamupload"><i class='fa fa-file-text-o'></i> <span>Cargar Archivo</span></a></li>
 
 
             <!--
